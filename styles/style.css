@@ -42,7 +42,7 @@ p{
 	background-color: var(--color-secondary);
 	color: white;
 	font-weight: 400;
-	border-radius: 3px;
+	border-radius: 0.1875rem;
 	font-size: 1.75rem;
 	width: 10em;
 	height: 1.75em;

@@ -36,6 +36,6 @@ window.addEventListener('scroll', function(){
 	if (window.scrollY < 100){
 		logo__image.style.height = "12.5rem";
 		logo.style.padding = "1em";
-		logo.style.borderRadius = "5px";
+		logo.style.borderRadius = "0.3125rem";
 	}
 })
