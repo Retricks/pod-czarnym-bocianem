@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="">
 	<meta name="author" content="Kamil Langer">
+	<script src="scripts/script.js"></script>
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
 	<link rel="icon" type="image/png" href="images/icon.png">
@@ -14,7 +15,7 @@
 <body>
 	<header class="header">
 		<div class="header__container wrapper">
-			<a class="logo" href="#"><img class="logo__image" src="images/logo.svg"></a>
+			<a id="logo" href="#"><img id="logo__image" src="images/logo.svg"></a>
 			<nav class="nav">
 				<a class="nav__link" href="">O Nas</a>
 				<a class="nav__link" href="">Camping</a>
@@ -34,6 +35,7 @@
 					<h1>Camping</h1>
 					<p>w zaciszu urokliwego miasta Cieszyn</p>
 				</div>
+				<i class="fas fa-chevron-down"></i>
 				<div class="main__box">
 					<p>doba już od</p>
 					<h1>12<span>zł</span></h1>
@@ -42,57 +44,81 @@
 				</div>
 			</div>
 		</main>
-		<!--<section class="about">
-			<div class="about__text">
-				<h2>O Nas</h2>
-				<p>
-				Camping Pod Czarnym Bocianem położony jest w zacisznym miejscu urokliwego Miasta Cieszyna. Zajmuje powierzchnię ok. 1,5 ha. Otoczony jest ścieżkami spacerowymi i rowerowymi. Od Czeskiej Republiki, do której dotrzemy w 5 minut piechotą oddziela nas tylko rzeka Olza.
-				</p>
-				<button class="button">Galeria zdjęć</button>
-			</div>
-			<div class="about__image">
-				<img src="images/about.png">
-			</div>
-		</section>
 		<section class="about">
-			<div class="about__text">
-				<h2>O Nas</h2>
-				<p>
-				Camping Pod Czarnym Bocianem położony jest w zacisznym miejscu urokliwego Miasta Cieszyna. Zajmuje powierzchnię ok. 1,5 ha. Otoczony jest ścieżkami spacerowymi i rowerowymi. Od Czeskiej Republiki, do której dotrzemy w 5 minut piechotą oddziela nas tylko rzeka Olza.
-				</p>
-				<button class="button">Galeria zdjęć</button>
-			</div>
-			<div class="about__images">
-				<img src="images/about.png">
+			<div class="about__container wrapper">
+				<div class="about__text">
+					<h2>O Nas</h2>
+					<p>
+					Camping Pod Czarnym Bocianem położony jest w zacisznym miejscu urokliwego Miasta Cieszyna. Zajmuje powierzchnię ok. 1,5 ha. Otoczony jest ścieżkami spacerowymi i rowerowymi. Od Czeskiej Republiki, do której dotrzemy w 5 minut piechotą oddziela nas tylko rzeka Olza.
+					</p>
+					<button class="button">Galeria zdjęć</button>
+				</div>
+				<div class="about__images">
+					<img class="about__image" src="images/about.png" alt="about">
+				</div>
 			</div>
 		</section>
 		<section class="camping">
-			<div class="camping__text">
-				<h2>Camping</h2>
-				<p>
-				Na terenie Campingu dostępne są: - przyłączenia do prądu - miejsce na grilla i ognisko - łazienki i WC damskie, męskie i dla niepełnosprawnych - WC chemiczne - świetlica, kuchnia, jadalnia dostępne w sezonie letnim - plac zabaw dla dzieci - bar i mini sklep - zalew kajakowy ( rowerki i kajaki )
-				</p>
-			</div>
-			<div class="camping__images">
-				<img src="images/camping3.png">
-				<img src="images/camping2.png">
-				<img src="images/camping5.png">
-				<img src="images/camping4.png">
+			<div class="camping__container wrapper">
+				<div class="camping__text">
+					<h2>Camping</h2>
+					<p>
+					Na terenie Campingu dostępne są:
+					</p>
+					<ul>
+					<li><p>- przyłączenia do prądu</p>
+					</li>
+					<li><p>- miejsce na grilla i ognisko</p>
+					</li>
+					<li><p>- łazienki i WC damskie, męskie i dla niepełnosprawnych</p>
+					</li>
+					<li><p>- WC chemiczne</p>
+					</li>
+					<li><p>- świetlica, kuchnia, jadalnia dostępne w sezonie letnim</p>
+					</li>
+					<li><p>- plac zabaw dla dzieci</p>
+					</li>
+					<li><p>- bar i mini sklep</p>
+					</li>
+					<li><p>- zalew kajakowy ( rowerki i kajaki )</p>
+					</li>
+					</ul>
+				</div>
+				<div class="camping__images">
+					<img class="camping__image" src="images/camping3.png" alt="camping3">
+					<img class="camping__image" src="images/camping2.png" alt="camping2">
+					<img class="camping__image" src="images/camping5.png" alt="camping5">
+					<img class="camping__image" src="images/camping4.png" alt="camping4">
+				</div>
 			</div>
 		</section>
 		<section class="domki">
-			<div class="domki__text">
-				<h2>Domki</h2>
-				<p>
-				Dysponujemy domkami 2,3,4 osobowymi z oddzielnymi łazienkami. Przed domkami znajdują się stoły z ławkami na których możesz spokojnie zjeść posiłek i odpocząć na świeżym powietrzu. Na wyposażeniu pokoi mamy: - lodówkę - czajnik bezprzewodowy - zestaw sztućców - kubki i talerzyki deserowe
-				</p>
-			</div>
-			<div class="domki__images">
-				<img src="images/assets1.png">
-				<img src="images/assets2.png">
+			<div class="domki__container wrapper">
+				<div class="domki__text">
+					<h2>Domki</h2>
+					<p>
+					Dysponujemy domkami 2,3,4 osobowymi z oddzielnymi łazienkami. 
+					Przed domkami znajdują się stoły z ławkami na których możesz spokojnie zjeść posiłek i odpocząć na świeżym powietrzu.</p>
+					<br>
+					
+					<p>Na wyposażeniu pokoi mamy:</p>
+					<ul>
+					<li><p>- lodówkę </p>
+					</li>
+					<li><p>- czajnik bezprzewodowy </p>
+					</li>
+					<li><p>- zestaw sztućców </p>
+					</li>
+					<li><p>- kubki i talerzyki deserowe</p>
+					
+				</div>
+				<div class="domki__images">
+					<img class="domki__image" src="images/assets1.png">
+					<img class="domki__image" src="images/assets2.png">
+				</div>
 			</div>
 		</section>
-		<section class="cennik">
+		<!--<section class="cennik">
 			<div class="cennik__text">
 				<h2>Cennik</h2>
 				<p>
