@@ -1,27 +1,13 @@
 function responsive(){
 	let root = document.querySelector(":root");
-	let font = 16*window.screen.width/1920;
+	let font = 16*window.innerWidth/1920;
 
-	if (screen.width <= 1920){
-		root.style.fontSize = font + "px";
-	}
-	else{
-		root.style.fontSize = "16px";
-	}
+	
+	root.style.fontSize = font + "px";
 }
 responsive();
 
-window.addEventListener('scroll', function(){
-	let root = document.querySelector(":root");
-	let font = 16*window.screen.width/1920;
-
-	if (screen.width <= 1920){
-		root.style.fontSize = font + "px";
-	}
-	else{
-		root.style.fontSize = "16px";
-	}
-})
+window.addEventListener('resize', responsive);
 
 
 window.addEventListener('scroll', function(){
