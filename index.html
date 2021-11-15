@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 	<title>Pod czarnym bocianem</title>
-	<meta charset="UTF8">
-	<meta name="description" content="Pod czarnym bocianem">
+	<meta charset="UTF-8">
+	<meta name="description" content="Strona promująca camping pod czarnym bocianem w zaciszu urokliwego miasta Cieszyn">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="">
+	<meta name="keywords" content="Pod czarnym bocianem, Camping, Cieszyn, domki">
 	<meta name="author" content="Kamil Langer">
 	<script src="scripts/script.js"></script>
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
 	<link rel="icon" type="image/png" href="images/icon.png">
+	<link rel="apple-touch-icon" href="images/icon.png">
 </head>
 <body>
 	<header class="header">
 		<div class="header__container wrapper">
-			<a id="logo" href="#"><img id="logo__image" src="images/logo.svg"></a>
+			<a id="logo" href="#"><img id="logo__image" src="images/logo.svg" alt="Pod czarnym bocianem"></a>
 			<nav class="nav">
 				<a class="nav__link" href="#about">O Nas</a>
 				<a class="nav__link" href="#camping">Camping</a>
@@ -32,15 +33,16 @@
 	<main class="main">
 		<div class="main__container wrapper">
 			<div class="main__heading">
-				<h1>Camping</h1>
-				<p>w zaciszu urokliwego miasta Cieszyn</p>
+				<h1>Camping
+				<span>w zaciszu urokliwego miasta Cieszyn</span>
+				</h1>
 			</div>
 			<i class="fas fa-chevron-down"></i>
 			<div class="main__box">
 				<p>doba już od</p>
-				<h1>12<span>zł</span></h1>
+				<h2>12<span>zł</span></h2>
 				<p>od osoby</p>
-				<button class="button">Sprawdź cennik</button>
+				<a href="#cennik" class="button">Sprawdź cennik</a>
 			</div>
 		</div>
 	</main>
@@ -51,7 +53,7 @@
 				<p>
 				Camping Pod Czarnym Bocianem położony jest w zacisznym miejscu urokliwego Miasta Cieszyna. Zajmuje powierzchnię ok. 1,5 ha. Otoczony jest ścieżkami spacerowymi i rowerowymi. Od Czeskiej Republiki, do której dotrzemy w 5 minut piechotą oddziela nas tylko rzeka Olza.
 				</p>
-				<button class="button">Galeria zdjęć</button>
+				<a href="#gallery" class="button">Galeria zdjęć</a>
 			</div>
 			<div class="about__images">
 				<img class="about__image" src="images/about.png" alt="about">
@@ -75,14 +77,14 @@
 				<p>- zalew kajakowy ( rowerki i kajaki )</p>
 			</div>
 			<div class="camping__images">
-				<img class="camping__image" src="images/camping3.png" alt="camping3">
-				<img class="camping__image" src="images/camping2.png" alt="camping2">
-				<img class="camping__image" src="images/camping5.png" alt="camping5">
-				<img class="camping__image" src="images/camping4.png" alt="camping4">
+				<img class="camping__image" src="images/camping3.png" alt="camping">
+				<img class="camping__image" src="images/camping2.png" alt="camping">
+				<img class="camping__image" src="images/camping5.png" alt="camping">
+				<img class="camping__image" src="images/camping4.png" alt="camping">
 			</div>
 		</div>
 	</section>
-	<section class="domki" id="domki">
+	<section class="houses" id="houses">
 		<div class="container wrapper">
 			<div class="domki__text">
 				<h2>Domki</h2>
@@ -99,24 +101,24 @@
 				<p>- kubki i talerzyki deserowe</p>
 				
 			</div>
-			<div class="domki__images">
-				<img class="domki__image" src="images/assets1.png" alt="assets1">
-				<img class="domki__image" src="images/assets2.png" alt="assets2">
+			<div class="houses__images">
+				<img class="houses__image" src="images/assets1.png" alt="domki">
+				<img class="houses__image" src="images/assets2.png" alt="domki">
 			</div>
 		</div>
 	</section>
-	<section class="cennik" id="cennik">
-		<div class="cennik__container wrapper">
+	<section class="prices" id="cennik">
+		<div class="prices__container wrapper">
 			<div class="cennik__text">
 				<h2>Cennik</h2>
 				<p>
 				Podane ceny są cenami za pojedynczą dobę pobytu
 				</p>
 			</div>
-			<div class="cennik-content">
-				<div class="cennik-content__column">
+			<div class="prices-content">
+				<div class="prices-content__column">
 					<h3>Camping</h3>
-					<div class="cennik-content__text">
+					<div class="prices-content__text">
 						<p>- pobyt osoby dorosłej</p><span>12 zł</span>
 						<p>- dziecko do 3 lat</p><span>GRATIS</span>
 						<p>- dziecko do 12 lat</p><span>10 zł</span>
@@ -127,8 +129,8 @@
 						<p>- bus noclegowy</p><span>25 zł</span>
 					</div>
 				</div>
-				<div class="cennik-content__column--end">
-					<div class="cennik-content__text">
+				<div class="prices-content__column--end">
+					<div class="prices-content__text">
 						<p>- camper</p><span>30 zł</span>
 						<p>- samochód osobowy</p><span>10 zł</span>
 						<p>- motocykl</p><span>8 zł</span>
@@ -139,9 +141,9 @@
 						<p>- opłata za gościa</p><span>10 zł / dzień</span>
 					</div>
 				</div>
-				<div class="cennik-content__column">
+				<div class="prices-content__column">
 					<h3>Domki</h3>
-					<div class="cennik-content__text">
+					<div class="prices-content__text">
 						<p>- osoba dorosła</p><span>40 zł</span>
 						<p>- dziecko do lat 3</p><span>GRATIS</span>
 						<p>- dziecko do 12 lat</p><span>30 zł</span>
@@ -198,7 +200,7 @@
 			</div>
 		</div>
 		<div class="gallery__button">
-			<button class="button">Więcej zdjęć</button>
+			<a href="#gallery" class="button">Więcej zdjęć</a>
 		</div>
 	</section>
 	<footer class="footer" id="footer">
@@ -215,7 +217,7 @@
 				<p>podczarnymbocianem@gmail.com</p>
 			</div>
 			<div class="footer__images">
-				<img class="footer__image" src="images/map.png" alt="map">
+				<img class="footer__image" src="images/map.png" alt="Camping">
 			</div>
 		</div>
 	</footer>

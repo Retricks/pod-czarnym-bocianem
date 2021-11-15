@@ -49,9 +49,9 @@ p{
 }
 
 .button{
-	cursor: pointer;
-	border: 0;
-	outline: 0;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
 	font-family: var(--font-primary);
 	background-color: var(--color-secondary);
 	color: white;
@@ -60,6 +60,7 @@ p{
 	font-size: 1.75rem;
 	width: 10em;
 	height: 1.75em;
+	line-height: 1.8em;
 	z-index: 1;
 }
 
@@ -135,7 +136,7 @@ p{
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-origin: border-box;
-		background-position: fixed;
+		background-attachment: fixed;
 		width: 100%;
 		z-index: -1;
 	}
@@ -155,6 +156,13 @@ p{
 					color: #FFFFFF;
 					text-shadow: 0px 0px 6px #00000099;
 					opacity: 1;
+				}
+				.main__heading h1 span{
+					font-family: var(--font-secondary);
+					display: block;
+					font-size: 2rem;
+					line-height: normal;
+					text-transform: none;
 				}
 				.main__heading p{
 					font-size: 2rem;
@@ -181,10 +189,13 @@ p{
 				transform: translateY(5rem);
 				z-index: 1;
 			}
-				.main__box h1{
+				.main__box h2{
 					color: var(--color-primary);
+					font-family: var(--font-primary);
+					font-size: 7rem;
 					font-weight: bold;
 					line-height: 0.7em;
+					letter-spacing: 0px;
 				}
 				.main__box span{
 					font-size: 0.5em;
@@ -246,22 +257,22 @@ p{
 				width: 50%;
 				height: 50%;
 			}
-.domki{
+.houses{
 	position: relative;
 	width: 100%;
 	background-color: white;
 }
-		.domki__text{
+		.houses__text{
 			width: 42%;
 		}
-			.domki__text h2{
+			.houses__text h2{
 				color: var(--color-primary);
 			}
-			.domki__text p{
+			.houses__text p{
 				color: black;
 				padding-right: 4em;
 			}
-		.domki__images{
+		.houses__images{
 			position: absolute;
 			right: 0;
 			width: 67.1rem;
@@ -271,41 +282,43 @@ p{
 			flex-direction: row;
 			align-items: center;
 		}
-			.domki__image{
+			.houses__image{
 				width: 50%;
 				height: 50%;
 			}
 
-.cennik{
+.prices{
 	width: 100%;
 	background-color: var(--color-secondary);
 	color: white;
 }
-	.cennik__container{
+	.prices__container{
 		min-height: 31.125rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
 		padding: 2rem 0 2rem 0;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
 	}
-		.cennik-content{
+		.prices-content{
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
 			width: 100%;
 		}
-			.cennik-content__column--end{
+			.prices-content__column--end{
 				align-self: end;
 			}
-				.cennik-content__text{
+				.prices-content__text{
 					display: grid;
 					grid-template-columns: 1fr 1fr;
 				}
-					.cennik-content__text p{
+					.prices-content__text p{
 						display: inline-block;
 						font-weight: 300;
 					}
-					.cennik-content__text span{
+					.prices-content__text span{
 						display: inline-block;
 						font-family: var(--font-secondary);
 						font-size: 1.3rem;
@@ -316,6 +329,8 @@ p{
 .gallery{
 	padding: 1rem 0;
 	width: 100%;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }
 .gallery__text{
 	margin: 1rem auto;
