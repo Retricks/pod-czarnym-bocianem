@@ -137,6 +137,7 @@ p{
 		background-size: cover;
 		background-origin: border-box;
 		background-attachment: fixed;
+		background-position: center;
 		width: 100%;
 		z-index: -1;
 	}
