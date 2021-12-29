@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import './variables';
+
+*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	min-height: 100vh;
+	width: 100%;
+}
+
+h1{
+	font-family: $font-primary;
+	font-size: 7rem;
+	letter-spacing: 0;
+}
+h2{
+	font-family: $font-primary;
+	font-size: 4rem;
+	font-weight: 500;
+}
+h3{
+	font-family: $font-primary;
+	font-size: 2rem;
+	font-weight: 500;
+	margin-top: 1em;
+	text-transform: uppercase;
+}
+p{
+	font-family: $font-secondary;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 1.75em;
+}
+
+.button{
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	font-family: $font-primary;
+	background-color: $color-secondary;
+	color: white;
+	font-weight: 400;
+	border-radius: 0.1875rem;
+	font-size: 1.75rem;
+	width: 10em;
+	height: 1.75em;
+	line-height: 1.8em;
+	z-index: 1;
+}
+.container{
+	grid-area: content;
+	width: 100%;
+	max-width: 1420;
+	margin: 0 auto;
+}
+
+@import './header';
+@import './main-section';
+@import './about';
+@import './camping';
+@import './houses';
+@import './prices';
+@import './gallery';
+@import './footer';
+
+		
+		
+@media only screen and (min-width: 1657px){
+	.camping{
+		grid-template-columns: calc((100vw - 1420px) / 2) 12fr 1fr;
+	}
+	.houses{
+		grid-template-columns: calc((100vw - 1420px) / 2) 12fr 1fr;
+	}
+	.footer{
+		grid-template-columns: calc((100vw - 1420px) / 2) 12fr 1fr;
+	}
+	.gallery__text{
+		grid-area: text;
+		width: 1420px;
+		margin: 0 auto;
+	}
+}
+@media only screen and (max-width: 1440px){
+	:root{
+	font-size: 14px;
+	}
+	.prices__container{
+		min-height: 40rem;
+	}
+}
+
+@media only screen and (max-width: 1000px){
+	
+	/*HEADER*/
+	.header__container{
+		height: 8em;
+	}
+	#logo{
+		z-index: 2;
+	}
+	#logo__image{
+		height: 10rem;
+	}
+	.nav{
+		position: absolute;
+		transform: translateY(-40em);
+		top: 0;
+		right: 0;
+		left: 0;
+		width: 100%;
+
+		flex-direction: column;
+		transition: 1s linear;
+		background-color: white;
+	}
+	.nav--clicked{
+		transform: translateY(8em);
+
+		transition: 1s linear;
+	}
+	.nav--clicked .nav__link{
+		font-family: $font-primary;
+		font-size: 1.75rem;
+		color: black;
+		font-weight: 500;
+		letter-spacing: 0;
+		padding: 0.25em;
+		margin: 1rem 0.5rem;
+		text-decoration: none;
+	}
+	.nav--clicked .nav__link:hover,
+	.nav--clicked .nav__link:focus{
+		color: $color-primary;
+		animation: link-anim 1s linear infinite;
+	}
+	@keyframes link-anim{
+		0% {
+			transform: rotate(0deg);
+			transform: translate(0, 0);
+		}
+		25% {
+			transform: rotate(45deg);
+		}
+		50% {
+			transform: translate(0, -10px);
+		}
+		75%{
+			transform: rotate(-45deg);
+		}
+		100% {
+			transform: rotate(0deg);
+			transform: translate(0, 0);
+		}
+	}
+
+	.burger-box{
+		transform: translateY(10px);
+		position: relative;
+		opacity: 1;
+		height: auto;
+		width: auto;
+		visibility: visible;
+		z-index: 3;
+	}
+	.burger::before{
+		content: '';
+		background: black;
+		display: block;
+		height: 0.2rem;
+		position: absolute;
+		top: -16px;
+		right: 0;
+		width: 60%;
+		animation: icon-before-b 1s both linear;
+	}
+	.burger::after{
+		content: '';
+		background: black;
+		display: block;
+		height: 0.2rem;
+		position: absolute;
+		top: -8px;
+		right: 0;
+		width: 80%;
+		animation: icon-after-b 1s both linear;
+	}
+	.burger{
+		background: black;
+		display: block;
+		width: 100%;
+		height: 0.2rem;
+		margin-bottom: 5px;
+		position: relative;
+		animation: icon-b 1s both linear;
+	}
+	.burger--ch::before{
+		animation: icon-before 1s forwards linear;
+	}
+	.burger--ch::after{
+		animation: icon-after 1s forwards linear;
+	}
+	.burger--ch{
+		animation: icon 1s forwards linear;
+	}
+
+
+
+
+	/*MAIN*/
+	.main__heading{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: white;
+	}
+	.main__heading h1{
+		font-size: 10rem;
+	}
+	.main__box{
+		bottom: auto;
+		right: auto;
+		opacity: 0;
+		height: 0;
+		width: 0;
+		visibility: hidden;
+		z-index: -1;
+		padding: 0;
+	}
+	/*ABOUT*/
+	.about{
+		padding-block: 3rem;
+	}
+		.about__container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			min-height: 42rem;
+		}
+			.about__text{
+				width: 100%;
+			}
+			.about__text p{
+				padding: 0;
+			}
+			.about__text .button{
+				margin-bottom: 2rem;
+			}
+			.about__images{
+				width: 100%;
+			}
+
+
+	/*CAMPING*/
+	.camping{
+		grid-template-areas: 
+		". content .";
+		padding-block: 3rem;
+	}
+		.camping__container{
+			min-height: 60rem;
+		}
+			.camping__text{
+				width: 100%;
+				margin-bottom: 2em;
+			}
+			.camping__text p{
+				padding: 0;
+			}
+			.camping__images{
+				height: 50%;
+				width: 100%;
+			}
+
+
+	/*HOUSES*/
+	.houses{
+		grid-template-areas: 
+		". content .";
+		padding-block: 3rem;
+	}
+		.houses__container{
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			min-height: 46rem;
+		}
+			.houses__text{
+				width: 100%;
+				margin-bottom: 2em;
+			}
+				.houses__text p{
+					padding-right: 0;
+				}
+			.houses__images{
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				align-items: center;
+			}
+			.houses__image{
+				height: 100%;
+				width: 50%;
+				background-size: cover;
+				background-position: center;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/*PRICES*/
+		.prices{
+			
+			padding-block: 3rem;
+		}
+			.prices__container{
+				padding-block: 3rem;
+			}
+				.prices-content{
+					grid-template-columns: 1fr;
+					grid-template-areas: 
+					"title1"
+					"col1"
+					"col2"
+					"title2"
+					"col3";
+				}
+		/*GALLERY*/
+			
+			.gallery-item{
+				width: 100%;
+			}
+			
+			/*FOOTER*/
+			.footer{
+				grid-template-areas: 
+				". content .";
+				padding-block: 3rem;
+			}
+				.footer__container{
+					flex-direction: column;
+				}
+					.footer__text{
+						width: 100%;
+						padding-bottom: 2rem;
+					}
+					.footer__images{
+							width: 100%;
+					}
+}
+
+
+@media only screen and (max-width: 500px){
+	:root{
+		font-size: 12px;
+	}
+	.main__heading h1{
+		font-size: 30vw;
+	}
+	#logo{
+		padding: 0;
+		border-radius: 0;
+	}
+		#logo__image{
+			height: 6rem;
+		}
+}
+
+
+@keyframes icon-before{
+	0% {
+		width: 60%;
+	}
+	25% {
+		width: 100%;
+	}
+	50% {
+		transform: translateY(14px);
+		visibility: hidden;
+	}
+	100% {
+		visibility: hidden;
+	}
+}
+@keyframes icon-after{
+	0% {
+		width: 80%;
+	}
+	25% {
+		width: 100%;
+	}
+	50% {
+		transform: translateY(7px);
+	}
+	100% {
+		width: 100%;
+		transform: rotate(-90deg) translateX(-7px);
+	}
+}
+@keyframes icon{
+	0% {
+		width: 100%;
+	}
+	25% {
+		width: 100%;
+	}
+	50% {
+		transform: translateY(-7px);
+	}
+	100% {
+		width: 100%;
+		transform: rotate(45deg) translate(-7px, -7px);
+	}
+}
+@keyframes icon-before-b{
+	0% {
+		transform: translateY(14px);
+		visibility: hidden;
+		width: 100%;
+	}
+	25% {
+		transform: translateY(14px);
+		visibility: hidden;
+		width: 100%;
+	}
+	50% {
+		visibility: hidden;
+		transform: translateY(14px);
+	}
+	75% {
+		width: 100%;
+		visibility: block;
+	}
+	100% {
+		width: 60%;
+	}
+}
+@keyframes icon-after-b{
+	0% {
+		width: 100%;
+		transform: rotate(-90deg) translateX(-7px);
+	}
+	25% {
+		transform: rotate(0deg) translateY(7px);
+	}
+	50% {
+		transform: translateY(7px);
+		width: 100%;
+	}
+	75% {
+		width: 100%;
+	}
+	100% {
+		width: 80%;
+	}
+}
+@keyframes icon-b{
+	0% {
+		width: 100%;
+		transform: rotate(45deg) translate(-7px, -7px);
+	}
+	25% {
+		transform: rotate(0deg) translate(0, -7px);
+	}
+	50% {
+		transform: translate(0, -7px);
+		width: 100%;
+	}
+	100% {
+		width: 100%;
+	}
+}

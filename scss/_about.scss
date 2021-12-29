@@ -1,0 +1,37 @@
+.about{
+	width: 100%;
+	background-color: white;
+	display: grid;
+	grid-template-columns: 1fr 12fr 1fr;
+	grid-template-areas: 
+	". content .";
+
+	&__container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		min-height: 33rem;
+	}
+		&__text{
+			width: 42%;
+
+			h2{
+				color: $color-primary;
+			}
+			p{
+				color: black;
+				margin-bottom: 2em;
+				padding-right: 4em;
+			}
+		}
+		&__images{
+			width: 58%;
+		}
+			&__image{
+				height: 25em;
+				background-size: cover;
+				background-origin: border-box;
+				background-position: center;
+			}   
+}

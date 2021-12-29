@@ -1,0 +1,59 @@
+.prices{
+	width: 100%;
+	background-color: $color-secondary;
+	color: white;
+	display: grid;
+	grid-template-columns: 1fr 12fr 1fr;
+	grid-template-areas: 
+	". content .";
+	&__container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		min-height: 36rem;
+	}
+		&-content{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas: 
+			"title1 . title2"
+			"col1 col2 col3";
+            &__title{
+                &--camping{
+                    grid-area: title1;
+                }
+                &--domki{
+                    grid-area: title2;
+                }
+            }
+            &__column{
+                &--camping1{
+                    grid-area: col1;
+                }
+                &--camping2{
+                    grid-area: col2;
+                }
+                &--domki{
+                    grid-area: col3;
+                }
+            }
+            
+            &__text{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 2em;
+                p{
+                    display: inline-block;
+                    font-weight: 300;
+                }
+                span{
+                    display: inline-block;
+                    font-family: $font-secondary;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    line-height: 1.75em;
+                }
+            }
+        }
+}

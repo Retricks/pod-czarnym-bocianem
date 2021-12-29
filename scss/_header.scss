@@ -1,0 +1,71 @@
+.header{
+    position: sticky;
+    background: white;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .5);
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-areas: 
+    ". content .";
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5.2em;
+
+        #logo{
+            background: white;
+            padding: 1em;
+            border-radius: 0.3125rem;
+            transition: 1s ease;
+            margin: auto 0;
+            &__image{
+                height: 12.5rem;
+                transition: 1s ease;
+            }
+        }
+
+        .burger-box{
+            position: absolute;
+            right: 0;
+            opacity: 0;
+            height: 0;
+            width: 0;
+            visibility: hidden;
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: #84817a;
+            margin: 0 1.5em;
+            padding: 1em;
+            color: black;
+            cursor: pointer;
+            display: block;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            &__link{
+                font-family: $font-primary;
+                font-size: 1.75rem;
+                color: black;
+                font-weight: 500;
+                letter-spacing: 0;
+                padding: 0.25em;
+                margin: 1rem 0.5rem;
+                text-decoration: none;
+                transition: 300ms ease;
+            }
+            &__link:hover,
+            &__link:focus{
+                color: $color-primary;
+                transform: translateY(4px);
+            }
+        }
+    }
+}

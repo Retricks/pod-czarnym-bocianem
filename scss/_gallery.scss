@@ -1,0 +1,68 @@
+.gallery{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 12fr 1fr;
+	grid-template-areas: 
+	". text ."
+	"content content content"
+	". button .";
+	min-height: 33rem;
+
+	&__text{
+		grid-area: text;
+		padding: 2rem 0;
+		
+        h2{
+			color: $color-primary;
+		}
+	}
+
+	&__content{
+		grid-area: content;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+		&-item{
+			width: 25%;
+			padding: 0.5rem;
+			flex-shrink: 0;
+
+			&__image-box{
+				position: relative;
+				background: rgba(64, 64, 122, 0.4);
+				cursor: pointer;
+				width: 100%;
+				padding-bottom: 56.25%;
+				overflow: hidden;
+				transition: 0.4s ease;
+
+				&:hover,
+				&:focus{
+					transform: translateY(-2%);
+					box-shadow: 0 0 12px rgba(0, 0, 0, .5);
+				}
+			}
+
+				&__image{
+					position: absolute;
+					cursor: pointer;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: 100%;
+					margin: auto;
+				}
+        }
+	&__button{
+		grid-area: button;
+		width: 100%;
+		padding: 3rem;
+		display: flex;
+		justify-content: center;
+	}
+}

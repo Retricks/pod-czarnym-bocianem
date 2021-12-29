@@ -1,0 +1,40 @@
+.footer{
+	background-color: $color-primary;
+	display: grid;
+	grid-template-columns: 1fr 12fr 1fr;
+	grid-template-areas: 
+	". content content";
+
+	&__container{
+		grid-area: content;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 28.5rem;
+	}
+		&__text{
+			width: 39%;
+			color: white;
+
+            span{
+                font-family: $font-secondary;
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.75em;
+            }
+		}
+		&__images{
+				height: 28.5rem;
+				width: 61%;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				align-items: center;
+		}
+			&__image{
+				height: 100%;
+				width: 100%;
+				background-size: cover;
+				background-position: center;
+            }
+}

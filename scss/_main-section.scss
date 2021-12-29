@@ -1,0 +1,85 @@
+.main{
+    background-image: url("../images/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-areas: 
+    ". content .";
+    &__container{
+        position: relative;
+        min-height: 50rem;
+    }
+        &__heading{
+            position: absolute;
+            top: 25em;
+            color: white;
+
+            h1{
+                text-transform: uppercase;
+                font-weight: 400;
+                line-height: 0.7em;
+                color: #FFFFFF;
+                text-shadow: 0 0 6px #00000099;
+                opacity: 1;
+                
+                span{
+                font-family: $font-secondary;
+                display: block;
+                font-size: 2rem;
+                line-height: normal;
+                text-transform: none;
+                }
+            }
+            p{
+                font-size: 2rem;
+                letter-spacing: 0;
+                text-shadow: 0 0 6px #00000099;
+                line-height: normal;
+            }
+        }
+        .fa-chevron-down{
+            position: absolute;
+            left: 50%;
+            font-size: 2em;
+            bottom: 1em;
+            color: white;
+        }
+        &__box{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 0 12px #0000001A;
+            border-radius: 0.3125rem;
+            padding: 2.5em;
+            text-align: center;
+            transform: translateY(5rem);
+            z-index: 1;
+            
+            h2{
+                color: $color-primary;
+                font-family: $font-primary;
+                font-size: 7rem;
+                font-weight: bold;
+                line-height: 0.7em;
+                letter-spacing: 0;
+            }
+            span{
+                font-size: 0.5em;
+                font-weight: 500;
+            }
+            p{
+                color: $color-light-black;
+                font-size: 2em;
+                font-weight: 700;
+                margin-bottom: 1em;
+                line-height: normal;
+            }
+        }
+}
